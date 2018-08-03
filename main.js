@@ -80,4 +80,22 @@ function pigLatin(phrase){
     return pigPhrase;
 }
 
-console.log(pigLatin("The quick brown fox jumped over the lazy dog."));
+console.log(pigLatin("The quick brown aarvark jumped over the lazy dog."));
+
+
+//Devin's solution:
+
+function pigLatin2(word){
+    var wordSplit = word.split('');
+    var wordShift = wordSplit.shift();
+    var wordPush = wordSplit.push(wordShift);
+    var vowels = ['a', 'e','i','o','u'];
+
+    if (vowels.includes(wordShift)){
+        return word+"way";
+    }else{
+        return wordSplit.join('') + 'ay';
+    }
+}
+
+console.log(pigLatin2("banana"))
